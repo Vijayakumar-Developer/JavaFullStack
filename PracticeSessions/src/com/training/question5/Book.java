@@ -24,10 +24,11 @@ public class Book {
 		this.author = author;
 		this.price = price;
 	} 
-	// create 1 constr with title // 1 constr with title, price // 1 constr with
-		// title, author, price 
-	void printDetails(){ // print the properties. if the
-		// value is not there it should not be printed 
+	// create 1 constr with title
+	// 1 constr with title, price 
+	// 1 constr with title, author, price 
+	void printDetails(){ 
+		// print the properties. if the value is not there it should not be printed 
 	if (title != null) {
 		System.out.println("Title: " + title); 
 		} 
