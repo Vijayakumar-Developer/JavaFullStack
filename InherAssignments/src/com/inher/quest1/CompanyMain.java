@@ -12,7 +12,13 @@ public class CompanyMain {
 		Project project1 =  new TeamTwo();
 		project1.doTask();
 		TeamTwo teamtwo =new TeamTwo();
-		teamtwo.getTechStack();
+		String[] techStack = teamtwo.getTechStack();
+		
+		System.out.println("Tech Stack used by Team Two : ");
+		for(String tech : techStack) {
+			System.out.println(tech);
+			
+		}
 		
 	}
 
