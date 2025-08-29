@@ -6,7 +6,7 @@ public class DemoAbs {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Employee emp;
+		Employee emp = null;
 		System.out.println("Enter role 1.Manager 2.team Leader 3.Developer");
 		int choice = sc.nextInt();
 		switch (choice) {
@@ -38,7 +38,24 @@ public class DemoAbs {
 		}
 		// sc.close();
 		emp.printDetails();
+		emp.calcBonus(0.2);
+		emp.showProjects();
+		emp.showRules();
 
+		System.out.println("Courses :");
+
+		for (String course : emp.showCourses()) {
+			System.out.println(course);
+		}
+
+		if(emp instanceof Manager) {
+			((Manager) emp ).funClub();
+		}else if(emp instanceof TeamLead && !(emp instanceof Developer) ) {
+			((TeamLead)emp) .corporateServices();
+		}else if(emp instanceof Developer) {
+			((Developer) emp) .showHobbies();
+		}
+		sc.close();
 	}
 
 }
