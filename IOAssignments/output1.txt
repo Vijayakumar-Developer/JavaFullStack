@@ -1,0 +1,3 @@
+Hi
+this is a Test file 
+for check readConsole Write file
