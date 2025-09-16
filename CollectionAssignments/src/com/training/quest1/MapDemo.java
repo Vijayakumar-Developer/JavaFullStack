@@ -16,7 +16,10 @@ public class MapDemo {
         countries.put("Karnataka", Arrays.asList("Bengaluru", "Mysuru", "Mangaluru"));
         
         for (Map.Entry<String, List<String>> entry : countries.entrySet()) {
-            System.out.println("State: " + entry.getKey() + " → Cities: " + entry.getValue());
+            String state = entry.getKey();
+            List<String> cities = entry.getValue();
+            System.out.println("State: " + state);
+            cities.forEach(city -> System.out.println("  City: " + city));
         }
 
 	}
